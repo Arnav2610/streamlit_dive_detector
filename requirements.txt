@@ -1,2 +1,6 @@
 streamlit
 opencv-python-headless
+joblib
+numpy
+pandas
+ultralytics
