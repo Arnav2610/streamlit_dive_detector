@@ -7,6 +7,9 @@ import joblib
 from ultralytics import YOLO
 from predict import predict_flop, getReason 
 
+torch.classes.__path__ = [] # add this line to manually set it to empty. 
+
+
 clf = joblib.load('flop_classifier.pkl')
 yolo_model = YOLO('yolov8n-pose.pt')
 
