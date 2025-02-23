@@ -1,4 +1,5 @@
 streamlit
+libgl1
 opencv-python-headless
 joblib
 numpy
