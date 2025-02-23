@@ -1,5 +1,5 @@
 streamlit
-torch
+torch==1.13.1
 opencv-python-headless
 google-generativeai
 joblib
@@ -7,4 +7,3 @@ numpy
 pandas
 ultralytics
 scikit-learn
-
