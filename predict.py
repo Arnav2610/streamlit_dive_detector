@@ -8,7 +8,7 @@ import joblib
 import json
 import google.generativeai as genai
 
-genai.configure(api_key="GEMINI_API_KEY")  
+genai.configure(api_key="AIzaSyAjwSb3D1loKnHrlb6NxzjcnC1nSHjOCCk")  
 genai_model = genai.GenerativeModel("gemini-1.5-flash")
 
 def getReason(verdict, weights):
