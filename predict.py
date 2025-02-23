@@ -57,13 +57,6 @@ THRESHOLD = 0.5
 yolo_model = YOLO('yolov8n-pose.pt')
 
 def extract_features(video_path):
-    """
-    Extracts features from a test video using multi-skeleton detection.
-    For each frame, each detected skeleton (if it has enough keypoints) is matched with its
-    counterpart from the previous frame (by index), and its features (velocity, acceleration,
-    torso angle, contact, reaction time) are computed individually.
-    Returns a list of feature vectors.
-    """
     video = cv2.VideoCapture(video_path)
     previous_keypoints = None
     previous_time = None
@@ -120,14 +113,6 @@ def extract_features(video_path):
     return features
 
 def predict_flop(video_path):
-    """
-    Extracts features from a test video and uses the trained classifier to predict the outcome.
-    Instead of hard 0/1 predictions, we use predict_proba to get probability estimates.
-    Predictions are made for each skeleton (across frames) and then aggregated (by averaging)
-    to yield a final probability. The final verdict is then computed based on a threshold.
-    Additionally, we compute the normalized average feature vector for the video and then
-    calculate the percent difference from the baseline for each feature.
-    """
     features = extract_features(video_path)
     if not features:
         print("No features extracted from the video. Cannot make a prediction.")
