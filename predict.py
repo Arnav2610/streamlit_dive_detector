@@ -9,6 +9,7 @@ import json
 import google.generativeai as genai
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY")) 
+
 genai_model = genai.GenerativeModel("gemini-1.5-flash")
 
 def getReason(verdict, weights):
