@@ -4,6 +4,7 @@ import os
 import numpy as np
 import pandas as pd
 import joblib
+import torch
 from ultralytics import YOLO
 from predict import predict_flop, getReason 
 
