@@ -1,7 +1,7 @@
 streamlit
 numpy
 torch==2.2.0
-opencv-python-headless
+opencv-python
 google-generativeai
 joblib
 pandas
