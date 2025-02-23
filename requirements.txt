@@ -1,6 +1,6 @@
 streamlit
 numpy
-torch
+torch==2.0.1
 opencv-python-headless
 google-generativeai
 joblib
