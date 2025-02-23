@@ -1,5 +1,5 @@
 streamlit
-numpy
+numpy==1.24.3
 torch==2.2.0
 opencv-python-headless
 google-generativeai
