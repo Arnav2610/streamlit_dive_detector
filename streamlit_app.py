@@ -8,8 +8,10 @@ import torch
 from ultralytics import YOLO
 from predict import predict_flop, getReason 
 
-torch.classes.__path__ = [] # add this line to manually set it to empty. 
+torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)] 
 
+# or simply:
+torch.classes.__path__ = []
 
 clf = joblib.load('flop_classifier.pkl')
 yolo_model = YOLO('yolov8n-pose.pt')
