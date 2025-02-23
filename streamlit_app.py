@@ -4,8 +4,12 @@ import os
 import numpy as np
 import pandas as pd
 import joblib
+import torch
 from ultralytics import YOLO
 from predict import predict_flop, getReason 
+
+torch.classes.__path__ = [os.path.join(torch.__path__[0], torch.classes.__file__)] 
+
 
 clf = joblib.load('flop_classifier.pkl')
 yolo_model = YOLO('yolov8n-pose.pt')
