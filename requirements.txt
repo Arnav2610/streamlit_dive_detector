@@ -7,3 +7,4 @@ joblib
 pandas
 ultralytics
 scikit-learn
+python==3.11.5
