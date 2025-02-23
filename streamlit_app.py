@@ -6,6 +6,7 @@ import pandas as pd
 import joblib
 from ultralytics import YOLO
 from predict import predict_flop, getReason 
+import asyncio
 
 clf = joblib.load('flop_classifier.pkl')
 yolo_model = YOLO('yolov8n-pose.pt')
